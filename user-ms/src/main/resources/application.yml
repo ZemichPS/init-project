@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: user-ms
+  profiles:
+    active: prod
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+      ddl-auto: none
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  show-actuator: false
+  api-docs:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: openapi, swagger-ui
+
+jwt:
+  duration: ${JWT_DURATION:24}
+  key: ${JWT_KEY:pdrxo67633w42kt6u9bl8li75w004ly7y42k50xdg11rg7h0lw6}
+
+
+

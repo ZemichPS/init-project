@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: true
+  flyway:
+    enabled: false
+eureka:
+  client:
+    enabled: false
+server:
+  port: 8081
+
+
+
